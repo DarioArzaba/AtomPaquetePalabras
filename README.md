@@ -1,4 +1,4 @@
-# paquete package
+# contador-palabras package
 
 A short description of your package.
 

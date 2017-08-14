@@ -2,19 +2,19 @@
 'context-menu':
   'atom-text-editor': [
     {
-      'label': 'Toggle paquete'
-      'command': 'paquete:toggle'
+      'label': 'Toggle contador-palabras'
+      'command': 'contador-palabras:toggle'
     }
   ]
 'menu': [
   {
     'label': 'Packages'
     'submenu': [
-      'label': 'paquete'
+      'label': 'contador-palabras'
       'submenu': [
         {
           'label': 'Toggle'
-          'command': 'paquete:toggle'
+          'command': 'contador-palabras:toggle'
         }
       ]
     ]
