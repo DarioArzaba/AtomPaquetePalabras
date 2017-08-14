@@ -9,11 +9,7 @@ module.exports = ContadorPalabras =
   activate: (state) ->
     @contadorPalabrasView = new ContadorPalabrasView(state.contadorPalabrasViewState)
     @modalPanel = atom.workspace.addModalPanel(item: @contadorPalabrasView.getElement(), visible: false)
-
-    # Events subscribed to in atom's system can be easily cleaned up with a CompositeDisposable
     @subscriptions = new CompositeDisposable
-
-    # Register command that toggles this view
     @subscriptions.add atom.commands.add 'atom-workspace', 'contador-palabras:toggle': => @toggle()
 
   deactivate: ->
@@ -25,9 +21,13 @@ module.exports = ContadorPalabras =
     contadorPalabrasViewState: @contadorPalabrasView.serialize()
 
   toggle: ->
-    console.log 'ContadorPalabras was toggled!'
-
+    console.log 'MyWordCount was toggled!'
     if @modalPanel.isVisible()
       @modalPanel.hide()
     else
+      editor = atom.workspace.getActiveTextEditor()
+      words = editor.getText().split(/\s+/).length
+      @contadorPalabrasView.setCount(words)
       @modalPanel.show()
+      
+    

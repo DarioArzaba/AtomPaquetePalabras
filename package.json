@@ -1,14 +1,14 @@
 {
   "name": "contador-palabras",
   "main": "./lib/contador-palabras",
-  "version": "0.0.0",
-  "description": "A short description of your package",
+  "version": "0.0.1",
+  "description": "Este paquete se dedica a contabilizar las palabras del buffer activo.",
   "keywords": [
   ],
   "activationCommands": {
     "atom-workspace": "contador-palabras:toggle"
   },
-  "repository": "https://github.com/atom/contador-palabras",
+  "repository": "https://github.com/DarioArzaba/AtomPaquetePalabras.git",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
