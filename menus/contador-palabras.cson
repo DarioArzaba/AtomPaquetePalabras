@@ -2,7 +2,7 @@
   'atom-text-editor': [
     {
       'label': 'Activar Contador Palabras'
-      'command': 'contador-palabras:toggle'
+      'command': 'contador-palabras:Activar'
     }
   ]
 'menu': [
@@ -13,7 +13,7 @@
       'submenu': [
         {
           'label': 'Activar'
-          'command': 'contador-palabras:toggle'
+          'command': 'contador-palabras:Activar'
         }
       ]
     ]

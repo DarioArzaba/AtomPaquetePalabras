@@ -10,7 +10,7 @@ module.exports = ContadorPalabras =
     @contadorPalabrasView = new ContadorPalabrasView(state.contadorPalabrasViewState)
     @modalPanel = atom.workspace.addModalPanel(item: @contadorPalabrasView.getElement(), visible: false)
     @subscriptions = new CompositeDisposable
-    @subscriptions.add atom.commands.add 'atom-workspace', 'contador-palabras:toggle': => @toggle()
+    @subscriptions.add atom.commands.add 'atom-workspace', 'contador-palabras:Activar': => @Activar()
 
   deactivate: ->
     @modalPanel.destroy()
@@ -20,8 +20,8 @@ module.exports = ContadorPalabras =
   serialize: ->
     contadorPalabrasViewState: @contadorPalabrasView.serialize()
 
-  toggle: ->
-    console.log 'MyWordCount was toggled!'
+  Activar: ->
+    console.log 'MyWordCount was Activard!'
     if @modalPanel.isVisible()
       @modalPanel.hide()
     else

@@ -12,7 +12,7 @@ describe "ContadorPalabras", ->
     workspaceElement = atom.views.getView(atom.workspace)
     activationPromise = atom.packages.activatePackage('contador-palabras')
 
-  describe "when the contador-palabras:toggle event is triggered", ->
+  describe "when the contador-palabras:Activar event is triggered", ->
     it "hides and shows the modal panel", ->
       # Before the activation event the view is not on the DOM, and no panel
       # has been created
@@ -20,7 +20,7 @@ describe "ContadorPalabras", ->
 
       # This is an activation event, triggering it will cause the package to be
       # activated.
-      atom.commands.dispatch workspaceElement, 'contador-palabras:toggle'
+      atom.commands.dispatch workspaceElement, 'contador-palabras:Activar'
 
       waitsForPromise ->
         activationPromise
@@ -33,7 +33,7 @@ describe "ContadorPalabras", ->
 
         contadorPalabrasPanel = atom.workspace.panelForItem(contadorPalabrasElement)
         expect(contadorPalabrasPanel.isVisible()).toBe true
-        atom.commands.dispatch workspaceElement, 'contador-palabras:toggle'
+        atom.commands.dispatch workspaceElement, 'contador-palabras:Activar'
         expect(contadorPalabrasPanel.isVisible()).toBe false
 
     it "hides and shows the view", ->
@@ -49,7 +49,7 @@ describe "ContadorPalabras", ->
 
       # This is an activation event, triggering it causes the package to be
       # activated.
-      atom.commands.dispatch workspaceElement, 'contador-palabras:toggle'
+      atom.commands.dispatch workspaceElement, 'contador-palabras:Activar'
 
       waitsForPromise ->
         activationPromise
@@ -58,5 +58,5 @@ describe "ContadorPalabras", ->
         # Now we can test for view visibility
         contadorPalabrasElement = workspaceElement.querySelector('.contador-palabras')
         expect(contadorPalabrasElement).toBeVisible()
-        atom.commands.dispatch workspaceElement, 'contador-palabras:toggle'
+        atom.commands.dispatch workspaceElement, 'contador-palabras:Activar'
         expect(contadorPalabrasElement).not.toBeVisible()

@@ -1,11 +1,8 @@
 module.exports =
 class ContadorPalabrasView
   constructor: (serializedState) ->
-    # Create root element
     @element = document.createElement('div')
     @element.classList.add('contador-palabras')
-
-    # Create message element
     message = document.createElement('div')
     message.textContent = "The ContadorPalabras package is Alive! It's ALIVE!"
     message.classList.add('message')

@@ -6,7 +6,7 @@
   "keywords": [
   ],
   "activationCommands": {
-    "atom-workspace": "contador-palabras:toggle"
+    "atom-workspace": "contador-palabras:Activar"
   },
   "repository": "https://github.com/DarioArzaba/AtomPaquetePalabras.git",
   "license": "MIT",
