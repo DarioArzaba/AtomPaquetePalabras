@@ -34,8 +34,6 @@ Ultimately Atom it couldn't compete with cloud development environments and more
    npm install
    ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 ## Usage
 
 When you activate the plugin through its dedicated shortcut `ctrl-alt-o` a window opens showing information about words in the active buffer of the editor.
